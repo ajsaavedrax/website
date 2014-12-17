@@ -13,6 +13,8 @@
 
 	<h1> So... you want to know all about Tony?</h1>
 
+	<?php echo '<p>dinosaur</p>'; ?>
+
 	<img src="images/SAM_0060.jpg" class="center">
 
 </body>
