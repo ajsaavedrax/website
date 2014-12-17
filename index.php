@@ -1,6 +1,8 @@
 <?php 
 
-
+if ( isset($_GET['first_name']) ) {
+	echo '<h1>FORM SUBMITTED</h1>';
+}
 
 ?>
 
@@ -25,7 +27,8 @@
 			<p>Enter your name:</p>
 			<input type="text" name="first_name">
 			<input type="text" name="last_name">
-			<input type="submit">
+			<input type="text" name="favorite_color">
+			<input type="submit" value="Click this bitch">
 		</form>
 	</div>
 
