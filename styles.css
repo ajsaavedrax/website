@@ -12,6 +12,7 @@ h1 {
 	text-align: center;
 	line-height: 200px;
 	background-color:#FFD630;
+	margin-bottom: 0;
 }
 
 h1,h2,h3,p{
@@ -26,4 +27,6 @@ img.center {
 .hello-form {
 	background-color: #000;
 	color: #fff;
+	padding: 23px;
+	margin-bottom: 20px;
 }
