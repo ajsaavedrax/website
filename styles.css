@@ -30,3 +30,7 @@ img.center {
 	padding: 23px;
 	margin-bottom: 20px;
 }
+.errors {
+	background-color: pink;
+	padding:14px;
+}

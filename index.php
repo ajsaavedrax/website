@@ -1,11 +1,23 @@
-<?php 
+<?php
 
-if ( isset($_GET['first_name']) ) {
-	echo '<h1>FORM SUBMITTED</h1>';
+$submit = $_GET['submit'];
+$firstname = $_GET['first_name'];
+$lastname = $_GET['last_name'];
+$error = "<ul>";
+
+if ( isset($submit) ) {
+	if ( empty($firstname) ) {
+		$error .= "<li>Please enter your first name</li>";
+		$error_flag = TRUE;
+	}
+	if ( empty($lastname) ) {
+		$error .= "<li>Please enter your last name</li>";
+		$error_flag = TRUE;
+	}
+	if ($error_flag) $error .= "</ul>";
 }
 
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -23,13 +35,23 @@ if ( isset($_GET['first_name']) ) {
 	<h1> So... you want to know all about Tony?</h1>
 
 	<div class="hello-form">
+		<?php 
+			if ($error_flag) {
+				echo '<div class="errors">' . $error . '</div>';
+			}
+			if ( isset($submit) && !error_flag ) {
+				echo 'Welcome ' . $firstname . '!';
+			} else {
+		?>
+
 		<form action="" method="GET">
 			<p>Enter your name:</p>
 			<input type="text" name="first_name">
 			<input type="text" name="last_name">
-			<input type="text" name="favorite_color">
-			<input type="submit" value="Click this bitch">
+			<input type="submit" name="submit" value="Click this bitch">
 		</form>
+		
+		<?php } ?>
 	</div>
 
 	<img src="images/SAM_0060.jpg" class="center">
