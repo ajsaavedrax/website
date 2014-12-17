@@ -37,7 +37,7 @@ if ( isset($submit) ) {
 
 	<div class="hello-form">
 		<?php 
-			if ($error_flag) {
+			if ( isset($error_flag) ) {
 				echo '<div class="errors">' . $error . '</div>';
 			}
 			if ( isset($submit) && !error_flag ) {
