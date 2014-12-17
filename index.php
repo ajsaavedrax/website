@@ -5,6 +5,7 @@ if ( !empty($_GET) ) {
 	$firstname = $_GET['first_name'];
 	$lastname = $_GET['last_name'];
 	$error = "<ul>";
+	$error_flag = '';
 
 	if ( empty($firstname) ) {
 		$error .= "<li>Please enter your first name</li>";
@@ -39,7 +40,7 @@ if ( !empty($_GET) ) {
 			if ( isset($error_flag) ) {
 				echo '<div class="errors">' . $error . '</div>';
 			}
-			if ( !empty($_GET) && !empty($error_flag) ) {
+			if ( !empty($_GET) && empty($error_flag) ) {
 				echo 'Welcome ' . $firstname . '!';
 			} else {
 		?>
