@@ -37,7 +37,7 @@ if ( !empty($_GET) ) {
 
 	<div class="hello-form">
 		<?php 
-			if ( isset($error_flag) ) {
+			if ( !empty($_GET) && !empty($error_flag) ) {
 				echo '<div class="errors">' . $error . '</div>';
 			}
 			if ( !empty($_GET) && empty($error_flag) ) {
