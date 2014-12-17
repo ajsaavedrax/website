@@ -1,11 +1,12 @@
 <?php
 
-$submit = $_GET['submit'];
-$firstname = $_GET['first_name'];
-$lastname = $_GET['last_name'];
-$error = "<ul>";
-
 if ( isset($submit) ) {
+
+	$submit = $_GET['submit'];
+	$firstname = $_GET['first_name'];
+	$lastname = $_GET['last_name'];
+	$error = "<ul>";
+
 	if ( empty($firstname) ) {
 		$error .= "<li>Please enter your first name</li>";
 		$error_flag = TRUE;
@@ -50,7 +51,7 @@ if ( isset($submit) ) {
 			<input type="text" name="last_name">
 			<input type="submit" name="submit" value="Click this bitch">
 		</form>
-		
+
 		<?php } ?>
 	</div>
 
