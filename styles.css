@@ -8,7 +8,7 @@ body {
 
 h1 {
 	height:200px; 
-	color: #4A375C;
+	color: #936EB8;
 	text-align: center;
 	line-height: 200px;
 	background-color:#FFD630;
@@ -22,4 +22,8 @@ img.center {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
+}
+.hello-form {
+	background-color: #000;
+	color: #fff;
 }
