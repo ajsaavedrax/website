@@ -47,8 +47,8 @@ if ( !empty($_GET) ) {
 
 		<form action="" method="GET">
 			<p>Enter your name:</p>
-			<input type="text" name="first_name">
-			<input type="text" name="last_name">
+			<input type="text" name="first_name" value="<?php if ($firstname) echo $firstname; ?>">
+			<input type="text" name="last_name" value="<?php if ($lastname) echo $lastname; ?>" >
 			<input type="submit" name="submit" value="Click this bitch">
 		</form>
 
@@ -59,4 +59,3 @@ if ( !empty($_GET) ) {
 
 </body>
 </html>
-
